@@ -1,0 +1,28 @@
+<html ng-app="dry">
+      <head></head>
+      <!--Required Library files -->
+      <script src="/view/angular.js"></script>
+      <script src="/view/jquery-3.2.1.min.js"></script>
+      <script src="/view/jquery-ui.min.js"></script>
+      <script src="/view/bootstrap.js"></script>
+
+      <!--Required Controller Files -->
+      <script src="/view/main.js"></script>
+          
+       <body ng-controller="drycontrol">
+          <div>
+            <span>{{ timeDate  }}</span>
+          </div>
+          <div>
+              <textarea id="txtArea" ng-model="content">
+              </textarea>
+              <button class="btn btn-primary" ng-click="save()">Save</button>
+          </div>
+          <div>
+                <ul   data-ng-repeat=" lst in dispLst track by $index">
+                   <li> {{ lst }}</li>
+                </ul>
+          </div>
+       </body>
+</html>
+
